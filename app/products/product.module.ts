@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ProductListComponent }  from './product-list.component';
 import { ProductDetailGuard }  from './product-guard.service';
 import { ProductDetailComponent }  from './product-detail.component';
+import { ProductEditComponent } from './product-edit.component';
 import { ProductFilterPipe }  from './product-filter.pipe';
 import { ProductService} from './product.service';
 
@@ -12,6 +13,7 @@ import { ProductService} from './product.service';
     declarations: [
         ProductListComponent,
         ProductDetailComponent,
+        ProductEditComponent,
         ProductFilterPipe
     ],
     imports: [
@@ -21,7 +23,12 @@ import { ProductService} from './product.service';
             { 
                 path: 'product/:id',
                 canActivate: [ ProductDetailGuard ],
-                component: ProductDetailComponent}
+                component: ProductDetailComponent
+            },
+            {
+                path: 'productEdit/:id',
+                component: ProductEditComponent
+            }
         ])
     ],
     providers: [
