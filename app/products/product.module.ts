@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ProductListComponent }  from './product-list.component';
 import { ProductDetailGuard }  from './product-guard.service';
@@ -18,6 +19,7 @@ import { ProductService} from './product.service';
     ],
     imports: [
         SharedModule,
+        ReactiveFormsModule,
         RouterModule.forChild([
             { path: 'products', component: ProductListComponent},
             { 

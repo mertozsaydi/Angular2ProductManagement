@@ -14,7 +14,8 @@ export class InMemoryDataService implements InMemoryDbService {
             'description': 'Leaf rake with 48-inch wooden handle.',
             'price': 19.95,
             'starRating': 3.2,
-            'imageUrl': 'http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png'
+            'imageUrl': 'http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png',
+            'tags': ['rake', 'leaf', 'yard', 'home']
         },
         {
             'id': 2,
@@ -34,7 +35,8 @@ export class InMemoryDataService implements InMemoryDbService {
             'description': 'Curved claw steel hammer',
             'price': 8.9,
             'starRating': 4.8,
-            'imageUrl': 'http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png'
+            'imageUrl': 'http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png',
+            'tags': ['tools', 'hammer', 'construction']
         },
         {
             'id': 8,
