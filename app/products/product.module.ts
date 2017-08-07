@@ -7,7 +7,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ProductData }  from './product-data';
 
 import { ProductListComponent }  from './product-list.component';
-import { ProductDetailGuard }  from './product-guard.service';
+import { ProductDetailGuard, ProductEditGuard  }  from './product-guard.service';
 import { ProductDetailComponent }  from './product-detail.component';
 import { ProductEditComponent } from './product-edit.component';
 import { ProductFilterPipe }  from './product-filter.pipe';
@@ -33,13 +33,15 @@ import { ProductService} from './product.service';
             },
             {
                 path: 'productEdit/:id',
+                canDeactivate: [ ProductEditGuard ],
                 component: ProductEditComponent
             }
         ])
     ],
     providers: [
         ProductService,
-        ProductDetailGuard
+        ProductDetailGuard,
+        ProductEditGuard
     ]
 })
 
