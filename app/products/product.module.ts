@@ -27,12 +27,12 @@ import { ProductService} from './product.service';
         RouterModule.forChild([
             { path: 'products', component: ProductListComponent},
             { 
-                path: 'product/:id',
+                path: 'products/:id',
                 canActivate: [ ProductDetailGuard ],
                 component: ProductDetailComponent
             },
             {
-                path: 'productEdit/:id',
+                path: 'products/:id/edit',
                 canDeactivate: [ ProductEditGuard ],
                 component: ProductEditComponent
             }
