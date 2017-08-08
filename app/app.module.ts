@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
+import { WelcomeComponent } from './home/welcome.component';
 import { AppRoutingModule }  from './app-routing.module';
 import { ProductModule }  from './products/product.module';
 import { UserModule } from './user/user.module';
@@ -17,7 +18,8 @@ import { UserModule } from './user/user.module';
     AppRoutingModule
   ],
   declarations: [ 
-    AppComponent
+    AppComponent,
+    WelcomeComponent
   ],
   bootstrap: [ AppComponent ]
 })
