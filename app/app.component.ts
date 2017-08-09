@@ -9,7 +9,7 @@ import { AuthService } from './user/auth.service';
     templateUrl: './app/app.component.html'
 })
 export class AppComponent {
-    pageTitle: string = 'Acme Product Management';
+    pageTitle: string = 'Product Management';
     loading: boolean = true;
 
     constructor(private authService: AuthService,

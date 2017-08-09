@@ -39,8 +39,4 @@ export class ProductDetailComponent implements OnInit {
             product => this.product = product,
             error => this.errorMessage = <any>error);
     }
-    
-    onBack(): void {
-        this._router.navigate(['/products']);
-    }
 }
